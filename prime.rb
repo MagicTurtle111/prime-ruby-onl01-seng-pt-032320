@@ -1,11 +1,13 @@
 # Add  code here!
 
-def prime?(int)
-  #if statement to check if interger is a prime number
-  if int > 1
-      int.each / (2..int-1)
-      
-  #return boolean TRUE
-  #else return boolean FALSE
-  
-end
+def prime?(n)
+  if n <= 1
+    false
+  else
+    array = (2..n).to_a
+    array.pop
+    array.all? do |number|
+      n % number != 0
+    end 
+  end 
+end 
